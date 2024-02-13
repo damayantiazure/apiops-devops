@@ -1,6 +1,12 @@
-apimServiceName: apiops-devops-da-qa
-namedValues:  
-loggers:   
-diagnostics:
-backends: 
-apis: 
+apimServiceName: [prod or any other target environment apim instance name goes here]
+namedValues: 
+loggers:  
+diagnostics:   
+backends:
+apis:
+  - name: star-wars
+    diagnostics:
+      - name: applicationinsights
+        properties:
+          verbosity: Error
+          loggerId: "/subscriptions/989f76fd-5edb-4aa1-b014-f989e1918adc/resourceGroups/apiops-devops-qa-rg/providers/Microsoft.ApiManagement/service/apiops-devops-da-qa/loggers/apim-apiops-appinsight221"
