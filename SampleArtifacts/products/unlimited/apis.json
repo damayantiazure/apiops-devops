@@ -1,5 +1,11 @@
 [
   {
-    "name": "testapi"
+    "name": "basic-calculator"
+  },
+  {
+    "name": "echo-api"
+  },
+  {
+    "name": "star-wars"
   }
 ]
