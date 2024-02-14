@@ -1,10 +1,7 @@
 apimServiceName: apiops-devops-da-qa
-namedValues:
-  - name: environment
-    properties:
-      displayName: environment
-      value: "https://www.bing.com"   
-
+namedValues: 
+loggers:    
+diagnostics:   
 apis:
-  - name: star-wars
+  
     
