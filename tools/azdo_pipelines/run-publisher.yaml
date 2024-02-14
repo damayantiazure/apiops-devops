@@ -25,21 +25,21 @@ variables:
     value: true
 
 stages:
-  - stage: push_changes_to_Dev_APIM
-    displayName: Push changes to Dev APIM
-    jobs:
-      - job: push_changes_to_Dev_APIM
-        displayName: Push changes to Dev APIM
-        pool:
-          vmImage: ubuntu-latest
-        steps:
-          - template: run-publisher-with-env.yaml
-            parameters:
-              API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: ${{ parameters.API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH }}
-              RESOURCE_GROUP_NAME : $(RESOURCE_GROUP_NAME)
-              API_MANAGEMENT_SERVICE_NAME : $(APIM_NAME)
-              ENVIRONMENT: "dev"
-              COMMIT_ID: ${{ parameters.COMMIT_ID }}
+  # - stage: push_changes_to_Dev_APIM
+  #   displayName: Push changes to Dev APIM
+  #   jobs:
+  #     - job: push_changes_to_Dev_APIM
+  #       displayName: Push changes to Dev APIM
+  #       pool:
+  #         vmImage: ubuntu-latest
+  #       steps:
+  #         - template: run-publisher-with-env.yaml
+  #           parameters:
+  #             API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: ${{ parameters.API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH }}
+  #             RESOURCE_GROUP_NAME : $(RESOURCE_GROUP_NAME)
+  #             API_MANAGEMENT_SERVICE_NAME : $(APIM_NAME)
+  #             ENVIRONMENT: "dev"
+  #             COMMIT_ID: ${{ parameters.COMMIT_ID }}
   - stage: push_changes_to_qa_APIM
     displayName: Push changes to QA APIM
     jobs:
