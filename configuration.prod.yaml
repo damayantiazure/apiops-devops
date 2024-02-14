@@ -1,4 +1,4 @@
-apimServiceName: [prod or any other target environment apim instance name goes here]
+apimServiceName: apiops-devops-da-qa
 namedValues:
   - name: environment
     properties:
