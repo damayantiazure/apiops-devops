@@ -64,18 +64,18 @@ stages:
                      CONFIGURATION_YAML_PATH:  $(Build.SourcesDirectory)/configuration.prod.yaml
                      ENVIRONMENT: "Prod"
                      COMMIT_ID: ${{ parameters.COMMIT_ID }}
-  - stage: push_changes_to_qa_APIM
-    displayName: Push changes to QA APIM
+  - stage: push_changes_to_prod_APIM
+    displayName: Push changes to prod APIM
     jobs:
-      - deployment: push_changes_to_qa_APIM
-        displayName: Push changes to QA APIM
+      - deployment: push_changes_to_prod_APIM
+        displayName: Push changes to prod APIM
         variables:
           #setting the testSecretValue to the prod resource group name as an example
-          testSecretValue: $(RESOURCE_GROUP_NAME_QA)
+          testSecretValue: $(RESOURCE_GROUP_NAME_PROD)
         pool:
           vmImage: ubuntu-latest
         # creates an environment if it doesn't exist
-        environment: 'qa'
+        environment: 'prod'
         strategy:
           # default deployment strategy, more coming...
           runOnce:
@@ -84,9 +84,9 @@ stages:
                  - template: run-publisher-with-env.yaml
                    parameters:
                      API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: ${{ parameters.API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH }}
-                     RESOURCE_GROUP_NAME : $(RESOURCE_GROUP_NAME_QA)
+                     RESOURCE_GROUP_NAME : $(RESOURCE_GROUP_NAME_PROD)
                      CONFIGURATION_YAML_PATH:  $(Build.SourcesDirectory)/configuration.prod.yaml
-                     ENVIRONMENT: "Prod"
+                     ENVIRONMENT: "prod"
                      COMMIT_ID: ${{ parameters.COMMIT_ID }}                   
  
                 
