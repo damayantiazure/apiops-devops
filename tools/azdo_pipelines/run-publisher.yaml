@@ -38,7 +38,7 @@ stages:
               API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: ${{ parameters.API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH }}
               RESOURCE_GROUP_NAME : $(RESOURCE_GROUP_NAME)
               API_MANAGEMENT_SERVICE_NAME : $(APIM_NAME)
-              ENVIRONMENT: "Dev"
+              ENVIRONMENT: "dev"
               COMMIT_ID: ${{ parameters.COMMIT_ID }}
   - stage: push_changes_to_qa_APIM
     displayName: Push changes to QA APIM
