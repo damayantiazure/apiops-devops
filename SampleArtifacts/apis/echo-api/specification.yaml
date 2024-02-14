@@ -3,7 +3,7 @@ info:
   title: Echo API
   version: '1.0'
 servers:
-  - url: https://apiops-devops-da-dev.azure-api.net/echo
+  - url: https://apimops-devop-dev.azure-api.net/echo
 paths:
   /resource:
     get:
