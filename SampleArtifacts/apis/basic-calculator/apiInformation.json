@@ -3,7 +3,7 @@
     "apiRevision": "1",
     "authenticationSettings": {},
     "description": "Arithmetics is just a call away!",
-    "displayName": "Basic Calculator",
+    "displayName": "Basic Calculators",
     "isCurrent": true,
     "path": "calc",
     "protocols": [
