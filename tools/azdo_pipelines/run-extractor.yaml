@@ -3,6 +3,7 @@ parameters:
     displayName: APIM instance name    
     type: string
     default:"apiops-devops-da-dev"
+    
   - name: RESOURCE_GROUP_NAME
     displayName: APIM instance resource group name
     type: string
