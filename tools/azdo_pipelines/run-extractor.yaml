@@ -2,19 +2,23 @@ parameters:
   - name: APIM_INSTANCE_NAME
     displayName: APIM instance name    
     type: string
+    default: "apimops-devop-dev"
   - name: RESOURCE_GROUP_NAME
     displayName: APIM instance resource group name
     type: string
+    default: "apiops-devops-rg"
   - name: APIM_REPOSITORY_NAME
     type: string
     displayName: APIM repository for pull request
+    default: "apimops-devop"
   - name: API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH
     type: string
     displayName: Folder where you want to extract the artifacts
+    default: "SampleArtifacts"
   - name: TARGET_BRANCH_NAME
     type: string
     displayName: Target branch for pull request
-    default: main
+    default: master
   - name: CONFIGURATION_YAML_PATH
     type: string
     displayName: Optional configuration file
