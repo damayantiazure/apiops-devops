@@ -10,10 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  - group: openhack
-  #- group: keyvault # option 1: Variable Group linked to KV
+  - group: apim-infra-api-variables 
   - name: ServiceConnectionName
-    value: AzureServiceConnection
+    value: masterconnection
   - name: workDir
     value: "$(System.DefaultWorkingDirectory)/iac/bicep"
 
