@@ -11,11 +11,11 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  - group: openhack
+  - group: apim-infra-api-variables
   - name: WORKDIR
     value: "$(Build.SourcesDirectory)/apis/poi/web"
   - name: DOCKER_IMAGE_BASE_NAME
-    value: "devopsoh/api-poi"
+    value: "apiops/api-poi"
   - name: API_NAME
     value: "poi"
 
@@ -60,7 +60,7 @@ stages:
                 - task: AzureRmWebAppDeployment@4
                   inputs:
                     ConnectionType: "AzureRM"
-                    azureSubscription: "AzureServiceConnection"
+                    azureSubscription: "masterconnection"
                     appType: webAppContainer
                     WebAppName: "$(RESOURCES_PREFIX)$(API_NAME)"
                     deployToSlotOrASE: true
@@ -72,7 +72,7 @@ stages:
 
                 - task: AzureAppServiceManage@0
                   inputs:
-                    azureSubscription: "AzureServiceConnection"
+                    azureSubscription: "masterconnection"
                     Action: "Stop Azure App Service"
                     WebAppName: "$(RESOURCES_PREFIX)$(API_NAME)"
                     SpecifySlotOrASE: true
@@ -81,7 +81,7 @@ stages:
 
                 - task: AzureAppServiceManage@0
                   inputs:
-                    azureSubscription: "AzureServiceConnection"
+                    azureSubscription: "masterconnection"
                     Action: "Start Azure App Service"
                     WebAppName: "$(RESOURCES_PREFIX)$(API_NAME)"
                     SpecifySlotOrASE: true
@@ -100,26 +100,9 @@ stages:
               steps:
                 - task: AzureAppServiceManage@0
                   inputs:
-                    azureSubscription: "AzureServiceConnection"
+                    azureSubscription: "masterconnection"
                     Action: "Swap Slots"
                     WebAppName: "$(RESOURCES_PREFIX)$(API_NAME)"
                     ResourceGroupName: "$(RESOURCES_PREFIX)rg"
                     SourceSlot: "staging"
-  # Adding Environment with Kubernetes                  
-  # - stage: Stagging
-  #   displayName: "Stagging (Green)"
-  #   jobs:
-  #     - deployment: Stagging
-  #       displayName: Stagging
-  #       environment: AKS.Test
-  #       strategy:
-  #         runOnce:
-  #           deploy:
-  #             steps:
-              
-  #               - task: KubernetesManifest@0
-  #                 inputs:
-  #                   action: 'deploy'
-  #                   kubernetesServiceConnection: 'gh-demo-aks-cluster-test-1673286236668'
-  #                   namespace: 'test'
-  #                   manifests: '/manifest'
+
