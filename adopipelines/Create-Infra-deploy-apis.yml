@@ -1,8 +1,7 @@
-trigger:
-  enabled: false
-variables:
-- name: resourceGroupName
-  value: "CONTAPP-APIM-DEVOPS "
+trigger: none
+ 
+
+
 
 stages:
 - stage: deploy_infra_dev
