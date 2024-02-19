@@ -79,11 +79,7 @@ jobs:
     steps:
       - checkout: self
 
-      - task: CredScan@3
-        displayName: "Scan source code for committed credentials"
-        inputs:
-          toolVersion: "2.2.7.8"
-          batchSize: "32"
+      
 
       # - task: SdtReport@2
       #   displayName: "Generates a report from the CredScan results"
@@ -122,13 +118,7 @@ jobs:
       #     WebScout: false
       #     ToolLogsNotFoundAction: "Standard"
 
-      - task: PostAnalysis@2
-        displayName: "Break the build"
-        inputs:
-          GdnBreakPolicyMinSev: "Warning"
-          GdnBreakAllTools: false
-          GdnBreakGdnToolCredScan: true
-          GdnBreakGdnToolCredScanSeverity: "Warning"
+     
 
   - job: SecretsScanningGitleaks
     displayName: "Secrets Scanning - Gitleaks"
