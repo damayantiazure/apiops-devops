@@ -1,0 +1,146 @@
+openapi: 3.0.1
+info:
+  title: Neptune Web API
+  version: v1-preview-01
+servers:
+  - url: https://apimopsapimdev13.azure-api.net/apimops-api
+paths:
+  /Teams/loopback:
+    get:
+      tags:
+        - Teams
+      summary: /Teams/loopback - GET
+      operationId: get-teams-loopback
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoopbackResponse'
+              example:
+                apiVersion: string
+                softwareVersion: string
+                azDoOrgName: string
+  /Teams/all:
+    get:
+      tags:
+        - Teams
+      summary: /Teams/all - GET
+      operationId: get-teams-all
+      parameters:
+        - name: top
+          in: query
+          description: Format - int32.
+          schema:
+            type: integer
+            format: int32
+            default: 10
+        - name: skip
+          in: query
+          description: Format - int32.
+          schema:
+            type: integer
+            format: int32
+            default: 0
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AzDoTeamCollection'
+              example:
+                value:
+                  - id: string
+                    name: string
+                    url: string
+                    description: string
+                    identityUrl: string
+                count: 0
+  /Teams/group-memberships:
+    get:
+      tags:
+        - Teams
+      summary: /Teams/group-memberships - GET
+      operationId: get-teams-group-memberships
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AzDoGroupMembershipSlimCollection'
+              example:
+                count: 0
+                value:
+                  - containerDescriptor: string
+                    memberDescriptor: string
+components:
+  schemas:
+    AzDoGroupMembershipSlim:
+      type: object
+      properties:
+        containerDescriptor:
+          type: string
+          nullable: true
+        memberDescriptor:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AzDoGroupMembershipSlimCollection:
+      type: object
+      properties:
+        count:
+          type: integer
+          format: int32
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/AzDoGroupMembershipSlim'
+          nullable: true
+      additionalProperties: false
+    AzDoTeam:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        url:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        identityUrl:
+          type: string
+          nullable: true
+      additionalProperties: false
+    AzDoTeamCollection:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/AzDoTeam'
+          nullable: true
+        count:
+          type: integer
+          format: int32
+      additionalProperties: false
+    LoopbackResponse:
+      type: object
+      properties:
+        apiVersion:
+          type: string
+          nullable: true
+        softwareVersion:
+          type: string
+          nullable: true
+        azDoOrgName:
+          type: string
+          nullable: true
+      additionalProperties: false

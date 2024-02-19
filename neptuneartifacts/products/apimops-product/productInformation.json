@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "description": "apimops-product proxied to ACA API online",
+    "displayName": "apimops-product description",
+    "state": "published",
+    "subscriptionRequired": false,
+    "terms": "apimops-product Terms"
+  }
+}

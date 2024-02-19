@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "description": "Version set for Neptune API",
+    "displayName": "neptune-version-set",
+    "versionHeaderName": "api-version",
+    "versionQueryName": "api-version",
+    "versioningScheme": "Header"
+  }
+}

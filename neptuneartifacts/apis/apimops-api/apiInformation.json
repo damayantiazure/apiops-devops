@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "apiRevision": "1",
+    "apiRevisionDescription": "A new revision of the API",
+    "apiVersion": "v1-preview-01",
+    "apiVersionDescription": "A preview version of the API",
+    "apiVersionSetId": "/subscriptions/989f76fd-5edb-4aa1-b014-f989e1918adc/resourceGroups/apiops-devops-rg/providers/Microsoft.ApiManagement/service/apimopsapimdev13/apiVersionSets/neptune-version-set",
+    "authenticationSettings": {},
+    "displayName": "Neptune Web API",
+    "isCurrent": true,
+    "path": "apimops-api",
+    "protocols": [
+      "https"
+    ],
+    "serviceUrl": "https://10.0.2.62/",
+    "subscriptionKeyParameterNames": {
+      "header": "Ocp-Apim-Subscription-Key",
+      "query": "subscription-key"
+    },
+    "subscriptionRequired": false
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "properties": {
+    "displayName": "containerappbackendhostname",
+    "secret": false,
+    "value": "joblistener.wonderfulcoast-09eef67c.eastus.azurecontainerapps.io"
+  }
+}
