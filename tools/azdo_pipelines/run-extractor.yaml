@@ -37,8 +37,7 @@ parameters:
 resources:
   repositories:
   - repository: apim-test
-    type: git
-    endpoint: MyAzureReposGitServiceConnection
+    type: git    
     name: customerPOCs/apim-test
   
 
