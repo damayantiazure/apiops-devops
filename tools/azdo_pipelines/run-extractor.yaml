@@ -38,8 +38,9 @@ resources:
   repositories:
   - repository: apim-test
     type: git
+    endpoint: MyAzureReposGitServiceConnection
     name: customerPOCs/apim-test
-    ref: main
+  
 
 trigger: none
 
