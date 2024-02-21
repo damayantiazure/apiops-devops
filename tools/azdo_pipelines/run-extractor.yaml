@@ -34,6 +34,13 @@ parameters:
       - OpenAPIV2Yaml
       - OpenAPIV2Json
 
+resources:
+  repositories:
+  - repository: apim-test
+    type: git
+    name: customerPOCs/apim-test
+    ref: main
+
 trigger: none
 
 variables:
