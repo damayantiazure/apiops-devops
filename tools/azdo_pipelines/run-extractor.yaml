@@ -10,7 +10,7 @@ parameters:
   - name: APIM_REPOSITORY_NAME
     type: string
     displayName: APIM repository for pull request
-    # default: "apimops-devop"
+    default: "apimops-devop"
   - name: API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH
     type: string
     displayName: Folder where you want to extract the artifacts
@@ -18,7 +18,7 @@ parameters:
   - name: TARGET_BRANCH_NAME
     type: string
     displayName: Target branch for pull request
-    # default: master
+    default: master
   - name: CONFIGURATION_YAML_PATH
     type: string
     displayName: Optional configuration file
@@ -34,11 +34,11 @@ parameters:
       - OpenAPIV2Yaml
       - OpenAPIV2Json
 
-resources:
-  repositories:
-  - repository: apim-test
-    type: git    
-    name: customerPOCs/apim-test
+# resources:
+#   repositories:
+#   - repository: apim-test
+#     type: git    
+#     name: customerPOCs/apim-test
   
 
 trigger: none
