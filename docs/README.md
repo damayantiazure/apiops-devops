@@ -17,33 +17,3 @@ This guide will guide you through the concept of APIOps. It applies the concepts
 
 The Wiki covers all of our supported resources. Think about it as being more resource-focused with deeper dives, as opposed to the aforementioned guide which is more scenario-based and holistic. So in essence you need to read both to have a successful adoption of the tool. [The wiki can be found on wiki tab within this repo or by following this link](https://github.com/Azure/apiops/wiki).
 
-# Roadmap
-
-To stay up-to-date with the APIOps roadmap, please follow it closely.
-To stay updated on the APIOps roadmap, please make sure to monitor it closely [here](https://github.com/Azure/apiops/projects?query=is%3Aopen).
-
-# Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-# Supporting Tools
-
-While the APIOPs tool does not have built-in support for promoting the migration of the APIM Dev Portal, there is another tool available that offers such functionality. We suggest you explore that tool which can be found [here](https://github.com/seenu433/apim-dev-portal-migration).
-
-# Trademarks
-
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
